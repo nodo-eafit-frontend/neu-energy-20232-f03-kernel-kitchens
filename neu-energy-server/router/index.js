@@ -7,7 +7,7 @@ const { updateEnergy } = require('./api/put');
 const { deleteEnergy } = require('./api/delete');
 
 
-router.get('/energy', readEnergy);
+router.get('/energy/:year/:month', readEnergy);
 router.post('/energy', createEnergy);
 router.put('/energy', updateEnergy);
 router.delete('/energy', deleteEnergy);
