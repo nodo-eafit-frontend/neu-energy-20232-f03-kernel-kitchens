@@ -55,3 +55,51 @@ function generateRandomData() {
 
 generateRandomData();
 
+
+
+function getMonthData(data, targetYear, targetMonth) {
+    const targetMonthLower = targetMonth.toLowerCase();
+
+    const foundData = data.consumos.find(consumo => {
+        return consumo.year === targetYear && consumo.month.toLowerCase() === targetMonthLower;
+    });
+
+    return foundData ? foundData.days : null;
+}
+
+// Example: Get data for January 2022
+const targetYear = 2022;
+const targetMonth = "enero";
+const january2022Data = getMonthData(yourData, targetYear, targetMonth);
+
+if (january2022Data !== null) {
+    console.log("Data found:");
+    console.log(january2022Data);
+} else {
+    console.log(`No data found for ${targetMonth} ${targetYear}.`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
