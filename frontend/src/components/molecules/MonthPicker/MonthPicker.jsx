@@ -1,6 +1,6 @@
 import DatePicker from 'react-datepicker';
 
-const MonthPicker = () => {
+export const MonthPicker = () => {
   const renderMonthContent = (month, shortMonth, longMonth) => {
     const tooltipText = `Tooltip for month: ${longMonth}`;
     return <span title={tooltipText}>{shortMonth}</span>;
@@ -14,5 +14,3 @@ const MonthPicker = () => {
     />
   );
 };
-
-export default MonthPicker;

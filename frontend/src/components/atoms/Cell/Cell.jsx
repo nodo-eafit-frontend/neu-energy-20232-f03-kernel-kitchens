@@ -1,5 +1,5 @@
-import React from 'react';
+const namespace = 'cell'
 
 export const Cell = () => {
-  return <div>Cell Component</div>;
+  return <div className={namespace}>Cell Component</div>;
 };

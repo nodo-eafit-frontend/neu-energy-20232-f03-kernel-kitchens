@@ -1,12 +1,13 @@
-const Table = () => {
+import { Month } from "../Month/Month";
+import { Hours } from "../../molecules";
+import { Label } from "../../atoms";
 
-  return (
+export const Table = () => {
 
-  <>
-
-  </>
-
-  );
+  return
+    <>
+    <Month />
+    <Label />
+    <Hours />
+    </>
 };
-
-export default Table;

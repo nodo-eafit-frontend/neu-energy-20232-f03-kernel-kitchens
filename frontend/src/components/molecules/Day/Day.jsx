@@ -1,10 +1,12 @@
+import { Label, Cell } from '../../atoms';
+
 export const Day = () => {
   return (
     <>
-      <label />
-      <label />
-      <cell />
-      <cell />
+      <Label />
+      <Label />
+      <Cell />
+      <Cell />
     </>
   );
 };
