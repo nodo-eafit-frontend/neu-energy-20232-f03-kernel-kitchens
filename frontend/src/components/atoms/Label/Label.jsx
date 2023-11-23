@@ -1,5 +1,7 @@
 import React from 'react';
 
+const namespace = 'label';
+
 export const Label = () => {
-  return <div>Label Component</div>;
+  return <span className={namespace}>Label Component</span>;
 };
