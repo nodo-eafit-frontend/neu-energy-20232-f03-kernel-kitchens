@@ -1,13 +1,14 @@
-import { Label, Cell } from './components/atoms';
-import { Hours } from './components/molecules/Hours/Hours';
+import { Table } from "./components/organims";
+import { MonthPicker } from "./components/molecules";
 
-function App() {
+
+
+export function App() {
   return (
     <>
       <h1>Hello World</h1>
-      <Hours />
+      <Table />
+      <MonthPicker />
     </>
   );
 }
-
-export default App;

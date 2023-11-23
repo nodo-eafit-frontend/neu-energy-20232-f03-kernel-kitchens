@@ -1,17 +1,13 @@
-const Month = () => {
+import { Day } from "../../molecules";
 
-    return (
+
+export const Month = () => {
+
+  return (
 
     <>
-     <Day/>
-    <Day/>
-    <Day/>
-    <Day/>
-    <Day/>
-    <Day/>
+      {<Day />}
     </>
 
-    );
-  };
-
-  export default Month;
+  );
+};
