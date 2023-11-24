@@ -1,13 +1,14 @@
-import { Month } from "../Month/Month";
-import { Hours } from "../../molecules";
 import { Label } from "../../atoms";
+import { Hours } from "../../molecules";
+import Month from "../Month/Month";
 
 export const Table = () => {
 
-  return
+  return (
     <>
-    <Month />
-    <Label />
-    <Hours />
+      <Month />
+      <Label />
+      <Hours />
     </>
+  )
 };

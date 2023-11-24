@@ -1,5 +1,5 @@
-import { Table } from "./components/organims";
 import { MonthPicker } from "./components/molecules";
+import { Table } from "./components/organims";
 
 
 
@@ -11,4 +11,5 @@ export function App() {
       <MonthPicker />
     </>
   );
-}
+};
+
