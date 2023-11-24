@@ -6,7 +6,7 @@ export const Month = () => {
   return (
 
     <>
-      {<Day />}
+      <Day />
     </>
 
   );
