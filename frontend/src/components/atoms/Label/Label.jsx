@@ -1,5 +1,5 @@
 const namespace = 'label';
 
-export const Label = () => {
-  return <span className={namespace}>Label Component</span>;
+export const Label = ({text}) => {
+  return <span className={namespace}>{text}</span>;
 };

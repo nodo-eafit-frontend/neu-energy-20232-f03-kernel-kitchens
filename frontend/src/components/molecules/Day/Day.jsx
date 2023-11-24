@@ -1,12 +1,12 @@
 import { Label, Cell } from '../../atoms';
 
-export const Day = () => {
+export const Day = ({day, hours=[]}) => {
   return (
     <>
-      <Label />
-      <Label />
-      <Cell />
-      <Cell />
+      <Label text={day}/>
+      {hours.map((consumptionXhour) => {
+        return <Cell value={consumptionXhour}/>
+        })};
     </>
   );
 };

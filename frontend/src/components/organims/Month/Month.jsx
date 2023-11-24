@@ -1,13 +1,16 @@
 import { Day } from "../../molecules";
 
 
-export const Month = () => {
+export const Month = ({ days = [] }) => {
 
   return (
 
     <>
-      <Day />
+      {days.map((item) => {
+        return <Day {...item}/>
+        })};
     </>
+
 
   );
 };
