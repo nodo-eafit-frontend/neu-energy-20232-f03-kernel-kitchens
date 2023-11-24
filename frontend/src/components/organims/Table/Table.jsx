@@ -4,10 +4,9 @@ import { Label } from "../../atoms";
 
 export const Table = () => {
 
-  return
-  <>
+  return (<>
     <Month />
     <Label />
     <Hours />
-  </>
+  </>)
 };
