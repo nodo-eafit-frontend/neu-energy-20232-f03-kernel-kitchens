@@ -1,16 +1,41 @@
-import DatePicker from 'react-datepicker';
+import { useState } from 'react';
 
-export const MonthPicker = () => {
-  const renderMonthContent = (month, shortMonth, longMonth) => {
-    const tooltipText = `Tooltip for month: ${longMonth}`;
-    return <span title={tooltipText}>{shortMonth}</span>;
+const months = [
+  'enero',
+  'febrero',
+  'marzo',
+  'abril',
+  'mayo',
+  'junio',
+  'julio',
+  'agosto',
+  'septiembre',
+  'octubre',
+  'noviembre',
+  'diciembre',
+];
+
+export const MonthPicker = ({ label }) => {
+  const [year, setYear] = useState();
+  const [month, setMonth] = useState();
+
+  const handleMonthPicker = (event) => {
+    const { value } = event.target;
+    const [currentYear, currentMonth] = value.split('-');
+
+    const monthIndex = +currentMonth - 1;
+
+    setYear(+currentYear);
+    setMonth(months[monthIndex]);
   };
+
   return (
-    <DatePicker
-      selected={new Date()}
-      renderMonthContent={renderMonthContent}
-      showMonthYearPicker
-      dateFormat='MM/yyyy'
-    />
+    <>
+      <label htmlFor='month-picker'>{label}</label>
+      <input type='month' id='month-picker' name='monthDate' min='2018-03' max='2023-11' onChange={handleMonthPicker} />
+
+      <div>Year: {year}</div>
+      <div>Month: {month}</div>
+    </>
   );
 };
