@@ -18,7 +18,6 @@ export function App() {
   } , [year, month])
   return (
     <>
-      <h1>Hello World</h1>
       <MonthPicker setYear={setYear} setMonth={setMonth} label='Mes Energía' />
       <Table days={days} />
     </>
