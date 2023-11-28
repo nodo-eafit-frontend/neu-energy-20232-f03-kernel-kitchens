@@ -6,8 +6,10 @@ export const Month = () => {
   return (
 
     <>
-      {<Day />}
+      <Day />
     </>
 
   );
 };
+
+module.exports = Month;

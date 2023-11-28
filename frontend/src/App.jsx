@@ -1,3 +1,4 @@
+
 import { Table } from './components/organims';
 import { MonthPicker } from './components/molecules';
 
@@ -11,4 +12,5 @@ export function App() {
       <Table days={days} />
     </>
   );
-}
+};
+

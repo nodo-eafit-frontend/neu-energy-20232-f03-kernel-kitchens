@@ -7,10 +7,8 @@ export const Hours = () => {
   return (
     <div className={namespace}>
       <span></span>
-      <Label />
-      <Label />
-      <Label />
-      <Label />
+      <Label />Label El<Label />
+      <Label />Label El<Label />
     </div>
   );
 };
