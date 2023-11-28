@@ -6,7 +6,7 @@ export const Day = ({day, hours=[]}) => {
       <Label text={day}/>
       {hours.map((consumptionXhour) => {
         return <Cell value={consumptionXhour}/>
-        })};
+        })}
     </>
   );
 };

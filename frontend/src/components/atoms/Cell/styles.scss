@@ -1,0 +1,9 @@
+@import '../../../sass/index.scss';
+
+
+.cell {
+    text-align: center;
+    width: 2.5rem;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+};

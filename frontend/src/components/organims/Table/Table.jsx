@@ -5,8 +5,8 @@ import { Label } from "../../atoms";
 export const Table = ({days}) => {
 
   return (<>
-    <Month days={days} />
-    <Label />
+    <Label  text='Hours' clase='hours-title' />
     <Hours />
+    <Month days={days} />
   </>)
 };

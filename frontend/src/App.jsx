@@ -16,6 +16,8 @@ export function App() {
     getDaysByMonthPicker({year, month})
     .then((days) => setDays(days))
   } , [year, month])
+
+  console.log(days);
   return (
     <>
       <MonthPicker setYear={setYear} setMonth={setMonth} label='Mes Energía' />

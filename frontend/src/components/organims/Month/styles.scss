@@ -1,0 +1,6 @@
+.month {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    gap: 0.3rem 0.3rem;
+};
