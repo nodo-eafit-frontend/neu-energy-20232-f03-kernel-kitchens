@@ -32,7 +32,7 @@ const readEnergy = (req, res) => {
 
 
     // 2: Modificar la respuesta de las horas, agregando el atributo de porcentaje injectEnergyPercent(consumoMensual, maxEnergy): consumoMensualModified
-     const injectEnergyPercent = (consumoMensual, maxEnergy) => {
+     const injectEnergyPercent2 = (consumoMensual, maxEnergy) => {
        consumoMensual.forEach((item) => {
         item.percent = (item.energy / maxEnergy) * 100;
       });
