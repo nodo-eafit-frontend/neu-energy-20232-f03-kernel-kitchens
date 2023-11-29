@@ -10,16 +10,17 @@ export function App() {
   const [year, setYear] = useState(2022);
   const [month, setMonth] = useState('enero');
 
-  const [days, setDays] = useState();
+  const [days, setDays] = useState([]);
   useEffect(() => {
     getDaysByMonthPicker({ year, month }).then((days) => setDays(days));
   }, [year, month]);
 
-  console.log(days);
+  const renderDefault = () => <div>Servidor no disponible</div>;
+
   return (
     <>
       <MonthPicker setYear={setYear} setMonth={setMonth} label='Mes Energía' />
-      <Table days={days} />
+      {days.length ? <Table days={days} /> : renderDefault()}
     </>
   );
 }

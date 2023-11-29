@@ -1,6 +1,6 @@
 import { Label } from '../../atoms';
 import { Hours } from '../../molecules';
-import Month from '../Month/Month';
+import { Month } from '../Month/Month';
 
 export const Table = ({ days }) => {
   return (

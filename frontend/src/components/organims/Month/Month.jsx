@@ -1,6 +1,7 @@
 import { Day } from '../../molecules';
 
 const namespace = 'month';
+
 export const Month = ({ days = [] }) => {
   return (
     <section className={namespace}>
@@ -10,5 +11,3 @@ export const Month = ({ days = [] }) => {
     </section>
   );
 };
-
-module.exports = Month;

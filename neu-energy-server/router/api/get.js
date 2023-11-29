@@ -13,6 +13,24 @@ const readEnergy = (req, res) => {
 
     const consumoMensual = consumo.consumos.find((items) => items.year === targetYear && items.month === targetMonth);
 
+    // TODO:
+    // 1: Crear método que retorne el valor de enregía más grande getMaxEnergy(consumoMensual): number
+    // 2: Modificar la respuesta de las horas, agregando el atributo de porcentaje injectEnergyPercent(consumoMensual, maxEnergy): consumoMensualModified
+
+    /*
+    days: [
+      {
+        day: 1,
+        consumption_hour: [
+          { energy: 192, percent: 0.7 },
+          { energy: 92, percent: 0.45 },
+          { energy: 137, percent: 0.7 },
+        ]
+      },
+      {...},
+      {...}
+    ] */
+
     if (consumoMensual) {
       res.status(200).send(consumoMensual);
     } else {

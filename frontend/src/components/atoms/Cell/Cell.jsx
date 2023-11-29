@@ -1,7 +1,5 @@
+const namespace = 'cell';
 
-const namespace = 'cell'
-
-export const Cell = ({value}) => {
-  return <div className={namespace}>{value}</div>
+export const Cell = ({ value /* TODO: energy, percent */ }) => {
+  return <div className={getClassCell(percent)}>{value}</div>;
 };
-console.log();
