@@ -1,5 +1,6 @@
 const fs = require('fs');
 const readJson = require('../../utils/json-update');
+const { get } = require('http');
 require('dotenv').config();
 const { ENERGY_PATH } = process.env;
 
@@ -15,10 +16,32 @@ const readEnergy = (req, res) => {
 
     // TODO:
     // 1: Crear método que retorne el valor de enregía más grande getMaxEnergy(consumoMensual): number
-    // 2: Modificar la respuesta de las horas, agregando el atributo de porcentaje injectEnergyPercent(consumoMensual, maxEnergy): consumoMensualModified
 
-    /*
-    days: [
+    const getMaxEnergy = (consumoMensual) => {
+      let maxEnergy = 0;
+      // empieza en 0 la busqueda del dato mayor
+      consumoMensual.forEach((item) => {
+      // forEach es el iterador para cada elemento del array
+        if (item.energy > maxEnergy) {
+          maxEnergy = item.energy;
+        }
+      });
+      return maxEnergy;
+    };
+
+
+
+    // 2: Modificar la respuesta de las horas, agregando el atributo de porcentaje injectEnergyPercent(consumoMensual, maxEnergy): consumoMensualModified
+     const injectEnergyPercent = (consumoMensual, maxEnergy) => {
+       consumoMensual.forEach((item) => {
+        item.percent = (item.energy / maxEnergy) * 100;
+      });
+      return consumoMensual;
+     };
+     //dudas de si esta bien
+
+    
+/*     days: [
       {
         day: 1,
         consumption_hour: [
@@ -29,7 +52,7 @@ const readEnergy = (req, res) => {
       },
       {...},
       {...}
-    ] */
+    ]  */
 
     if (consumoMensual) {
       res.status(200).send(consumoMensual);
