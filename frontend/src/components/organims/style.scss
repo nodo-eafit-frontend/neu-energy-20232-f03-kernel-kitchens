@@ -1,2 +1,13 @@
 @import './Month/styles.scss';
 @import './Table/styles.scss';
+
+
+* {	 
+	box-sizing: border-box;
+	// outline: red dashed 1px;
+}
+body {
+	font-size: 16px;
+	height: 100vw;
+  margin: 3%
+}
