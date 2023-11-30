@@ -1,6 +1,23 @@
 .hours {
   display: grid;
-  grid-template-columns: repeat(25, 1fr);
-  width: 80vw;
+  grid-template-columns: 7.5vw 89vw;
+  // width: 80vw;
   margin-bottom: 0.8rem;
+  padding-top: 2rem;
+
+  &--cont {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    width: 5rem;
+    column-gap: 18px;
+  }
+
+  &--cuadradito {
+    display: inline-block;
+    background-color: $cuadradito;
+    height: 1rem;
+    width: 1rem;
+
+  }
 }
+

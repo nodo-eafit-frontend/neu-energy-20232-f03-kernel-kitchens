@@ -1,7 +1,7 @@
-import { Table } from './components/organims';
-import { MonthPicker } from './components/molecules';
-import { getDaysByMonthPicker } from './services';
 import { useEffect, useState } from 'react';
+import { MonthPicker } from './components/molecules';
+import { Table } from './components/organims';
+import { getDaysByMonthPicker } from './services';
 
 const mes = 'febrero';
 const año = 2022;
@@ -20,7 +20,7 @@ export function App() {
   return (
     <>
       <MonthPicker setYear={setYear} setMonth={setMonth} label='Mes Energía' />
-      {days.length ? <Table days={days} /> : renderDefault()}
+      {days.length ? <Table days={days}/> : renderDefault()}
     </>
   );
 }
