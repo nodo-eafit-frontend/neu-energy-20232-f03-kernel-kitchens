@@ -1,5 +1,10 @@
 .label {
-  background-color: aqua;
-  border: 1px solid black;
+  text-align: center;
   padding-inline: 1rem;
+  border-radius: 5px;
+
+  &hours-title {
+    margin: auto;
+    width: 80vw;
+  }
 }

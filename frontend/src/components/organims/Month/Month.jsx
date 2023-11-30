@@ -1,15 +1,13 @@
-import { Day } from "../../molecules";
+import { Day } from '../../molecules';
 
+const namespace = 'month';
 
-export const Month = () => {
-
+export const Month = ({ days = [] }) => {
   return (
-
-    <>
-      <Day />
-    </>
-
+    <section className={namespace}>
+      {days.map((item) => (
+        <Day {...item} />
+      ))}
+    </section>
   );
 };
-
-module.exports = Month;

@@ -15,9 +15,9 @@ const months = [
   'diciembre',
 ];
 
-export const MonthPicker = ({ label }) => {
-  const [year, setYear] = useState();
-  const [month, setMonth] = useState();
+const namespace = 'month-picker-input';
+
+export const MonthPicker = ({ label, setYear, setMonth }) => {
 
   const handleMonthPicker = (event) => {
     const { value } = event.target;
@@ -30,12 +30,10 @@ export const MonthPicker = ({ label }) => {
   };
 
   return (
-    <>
-      <label htmlFor='month-picker'>{label}</label>
+    <div className={namespace}>
+      <label htmlFor='month-picker' className={namespace+'-label'}>{label}</label>
       <input type='month' id='month-picker' name='monthDate' min='2018-03' max='2023-11' onChange={handleMonthPicker} />
 
-      <div>Year: {year}</div>
-      <div>Month: {month}</div>
-    </>
+    </div>
   );
 };
