@@ -6,19 +6,19 @@
   border: 1px solid $light-gray;
   border-radius: 5px;
 
-  &.nulo {
+  &--nulo {
     background-color: rgba(255, 255, 255);
   }
-  &.bajo {
+  &--bajo {
     background-color: rgba(200, 255, 0);
   }
-  &.medio-bajo {
+  &--medio-bajo {
     background-color: rgba(110, 255, 110);
   }
-  &.medio-alto {
+  &--medio-alto {
     background-color: rgba(60, 255, 60);
   }
-  &.alto {
+  &--alto {
     background-color: rgba(0, 255, 0);
   }
 }
