@@ -1,6 +1,7 @@
 const readJson = require('../../utils/json-update');
 require('dotenv').config();
 const { ENERGY_PATH } = process.env;
+const { getMaxEnergy, injectEnergyPercent } = require('../../utils/energy');
 
 const readEnergy = (req, res) => {
   const targetYear = Number(req.params.year);

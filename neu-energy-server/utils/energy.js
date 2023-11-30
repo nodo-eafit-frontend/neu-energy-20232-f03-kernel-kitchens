@@ -30,3 +30,5 @@ const injectEnergyPercent = (consumoMensual, maxEnergy) => {
 
   return daysModified;
 };
+
+module.exports = { getMaxEnergy, injectEnergyPercent };
