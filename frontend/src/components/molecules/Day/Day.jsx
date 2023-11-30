@@ -1,11 +1,11 @@
 import { Cell, Label } from '../../atoms';
 
-export const Day = ({ day, hours = [] }) => {
+export const Day = ({ day, consumption_hour = [] }) => {
   return (
     <>
       <Label text={day} />
-      {hours.map((consumptionXhour) => {
-        return <Cell value={consumptionXhour} />;
+      {consumption_hour.map((consumptionXhour) => {
+        return <Cell energy={consumptionXhour.energy} percent={consumptionXhour.percent} />;
       })}
     </>
   );

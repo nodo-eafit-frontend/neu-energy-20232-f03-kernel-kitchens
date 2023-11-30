@@ -6,11 +6,8 @@
   border: 1px solid $light-gray;
   border-radius: 5px;
 
-  &--nulo {
-    background-color: rgba(255, 255, 255); // TODO: USar variables de scss
-  }
   &--bajo {
-    background-color: rgba(200, 255, 0);
+    background-color: rgba(255, 255, 255);
   }
   &--medio-bajo {
     background-color: rgba(110, 255, 110);
