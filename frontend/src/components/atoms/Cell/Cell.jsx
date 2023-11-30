@@ -1,28 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from 'react';
 
 const namespace = 'cell';
 
-export const Cell = ({ value, energy, percent = 0.65 }) => {
+// props -> no se guardan/modificar a nivel de componente
+// states -> Se guardan/modificar a nivel de componente
 
+const getClassCell = (percent) => {
+  let intensity = '';
 
-  const getClassCell = (percent) => {
-    if (percent === 0) {
-      const intensity = "nulo"
-      return `${namespace} ${intensity}`
-    } else if (percent > 0 && percent <= 0.25) {
-      const intensity = "bajo"
-      return `${namespace} ${intensity}`
-    } else if (percent > 0.25 && percent <= 0.50) {
-      const intensity = "medio-bajoo"
-      return `${namespace} ${intensity}`
-    } else if (percent > 0.50 && percent <= 0.75) {
-      const intensity = "medio-alto"
-      return `${namespace} ${intensity}`
-    } else {
-      const intensity = "alto"
-      return `${namespace} ${intensity}`
-    }
-  };
+  if (percent > 0 && percent <= 0.25) {
+    intensity = 'nulo';
+  } else if (percent > 0.25 && percent <= 0.5) {
+    intensity = 'medio-bajo';
+  } else if (percent > 0.5 && percent <= 0.75) {
+    intensity = 'medio-alto';
+  } else {
+    intensity = 'alto';
+  }
 
-  return <div className={getClassCell(percent)}>{value}</div>;
+  return `${namespace}--${intensity}`;
+};
+
+export const Cell = ({ value, energy, percent = Math.random() }) => {
+  return <div className={`${namespace} ${getClassCell(percent)}`}>{value}</div>;
 };
