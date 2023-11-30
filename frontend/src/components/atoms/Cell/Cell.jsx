@@ -21,6 +21,8 @@ const getClassCell = (percent) => {
   return `${namespace}--${intensity}`;
 };
 
-export const Cell = ({ value, energy, percent = Math.random() }) => {
-  return <div className={`${namespace} ${getClassCell(percent)}`}>{value}</div>;
+export const Cell = ({ energy, percent }) => {
+
+  console.log(energy, percent)
+  return <div className={`${namespace} ${getClassCell(percent)}`}>{energy}</div>;
 };

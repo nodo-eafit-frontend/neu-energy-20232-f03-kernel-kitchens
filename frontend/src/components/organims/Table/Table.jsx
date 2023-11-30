@@ -7,6 +7,7 @@ export const Table = ({ days }) => {
     <>
       <Label text='Hours' clase='hours-title' />
       {/*  TODO: Incluir LAbel del día, ajustarlo con css */}
+      <Label text='Days' clase='Days-title' />
       <Hours />
       <Month days={days} />
     </>
