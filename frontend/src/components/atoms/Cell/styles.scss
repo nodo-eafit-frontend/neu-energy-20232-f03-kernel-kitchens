@@ -24,6 +24,7 @@
 }
 
 .cell:hover {
-  color: black;
+  color: $black;
   cursor: pointer;
+  font-weight: bold;
 }
