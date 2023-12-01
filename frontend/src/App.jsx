@@ -19,7 +19,7 @@ export function App() {
 
   return (
     <>
-      <MonthPicker setYear={setYear} setMonth={setMonth} label='Mes Energía' />
+      <MonthPicker setYear={setYear} setMonth={setMonth} label='Fecha' />
       {days.length ? <Table days={days}/> : renderDefault()}
     </>
   );
