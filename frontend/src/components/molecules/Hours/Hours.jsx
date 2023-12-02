@@ -11,11 +11,9 @@ export const Hours = () => {
   return (
     <div className={namespace}>
       <span className={`${namespace}--${cuadrado}`}></span>
-      <section className={`${namespace}--cont`}>
         {horas.map((value) => {
           return <Label text={value}/>;
         })}
-      </section>
     </div>
   );
 };
