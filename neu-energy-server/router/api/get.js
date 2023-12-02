@@ -17,7 +17,7 @@ const readEnergy = (req, res) => {
 
     // 2: Modificar la respuesta de las horas, agregando el atributo de porcentaje injectEnergyPercent(consumoMensual, maxEnergy): consumoMensualModified
     const days = injectEnergyPercent(consumoMensual, maxEnergy);
-    console.log(days);
+
     if (days?.length) {
       res.status(200).send({ year: targetYear, month: targetMonth, days });
     } else {

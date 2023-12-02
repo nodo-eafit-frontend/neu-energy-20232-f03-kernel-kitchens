@@ -1,19 +1,21 @@
 @import './Month/styles.scss';
 @import './Table/styles.scss';
+@import '../../sass/index.scss';
 
-
-* {	 
+* {
 	box-sizing: border-box;
-	// outline: red dashed 1px;
 }
 body {
+  background-color: rgb(230, 229, 232);
 	font-size: 16px;
-	// height: 100vw;
   margin: 3%
 }
+
+
 h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
-  margin-left: 8rem;
-  margin-top: 0;
+  margin-bottom: 0rem;
+  margin-left: 4rem;
+  font-family: open sans;
+  font-weight: bold;
 }

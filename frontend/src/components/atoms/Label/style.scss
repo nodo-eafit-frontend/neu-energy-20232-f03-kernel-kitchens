@@ -10,14 +10,18 @@
     top: 60%;
     left: 3%;
     transform: rotate(-90deg);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    font-family: open sans;
+    font-weight: 700;
   }
 
   &-hours-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     position: absolute;
     left: 50%;
     top: 12%;
+    font-family: open sans;
+    font-weight: 700;
   }
 }
 
